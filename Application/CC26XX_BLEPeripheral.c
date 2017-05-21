@@ -128,7 +128,7 @@
 #define DEFAULT_CONN_PAUSE_PERIPHERAL         6
 
 // How often to perform periodic event (in msec)
-#define SBP_PERIODIC_EVT_PERIOD               5000
+#define SBP_PERIODIC_EVT_PERIOD               500  // 5000 Original
 
 #ifdef FEATURE_OAD
 // The size of an OAD packet.
@@ -195,7 +195,7 @@ Char sbpTaskStack[SBP_TASK_STACK_SIZE];
 static uint8_t scanRspData[] =
 {
   // complete name
-  13,   // length of this data
+  14,   // length of this data
   GAP_ADTYPE_LOCAL_NAME_COMPLETE,
   'P',
   'r',
@@ -209,6 +209,7 @@ static uint8_t scanRspData[] =
   'g',
   'e',
   'l',
+  'a',
 
   // connection interval range
   0x05,   // length of this data
@@ -378,8 +379,10 @@ static void CC26XX_BLEPeripheral_init(void)
   appMsgQueue = Util_constructQueue(&appMsg);
 
   // Create one-shot clocks for internal periodic events.
+  //Util_constructClock(&periodicClock, CC26XX_BLEPeripheral_clockHandler,
+  //                    SBP_PERIODIC_EVT_PERIOD, 0, false, SBP_PERIODIC_EVT); //Original!
   Util_constructClock(&periodicClock, CC26XX_BLEPeripheral_clockHandler,
-                      SBP_PERIODIC_EVT_PERIOD, 0, false, SBP_PERIODIC_EVT);
+                      SBP_PERIODIC_EVT_PERIOD, 500, false, SBP_PERIODIC_EVT);
   
 #ifndef SENSORTAG_HW
 //  Board_openLCD();
@@ -947,7 +950,7 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
       {
         uint8_t peerAddress[B_ADDR_LEN];
 
-        PINCC26XX_setOutputValue(BOARD_LED2, 1);  // Shirzad!!!
+        PINCC26XX_setOutputValue(BOARD_LED2, 0);  // Shirzad!!!
 
         GAPRole_GetParameter(GAPROLE_CONN_BD_ADDR, peerAddress);
 
@@ -988,6 +991,8 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
       Util_stopClock(&periodicClock);
       
       CC26XX_BLEPeripheral_freeAttRsp(bleNotConnected);
+
+      PINCC26XX_setOutputValue(BOARD_LED2, 1);  // Shirzad!!!
 
       LCD_WRITE_STRING("Disconnected", LCD_PAGE2);
 
@@ -1097,6 +1102,12 @@ static void CC26XX_BLEPeripheral_performPeriodicTask(void)
 #ifndef FEATURE_OAD
   uint8_t valueToCopy;
 
+  //PINCC26XX_setOutputEnable(BOARD_LED1, 1);
+  //PINCC26XX_setOutputValue(BOARD_LED1, 1);  // Shirzad!!!
+  // it must be time to blink the freaking LED
+  uint_t bVal = PINCC26XX_getOutputValue(BOARD_LED1); // Shirzad
+  PINCC26XX_setOutputValue(BOARD_LED1, !bVal); // Shirzad
+  //PINCC26XX_setOutputValue(BOARD_LED2, bVal);
   // Call to retrieve the value of the third characteristic in the profile
   if (SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR3, &valueToCopy) == SUCCESS)
   {

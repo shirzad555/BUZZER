@@ -1306,11 +1306,12 @@ static void UARTCC26XX_initHw(UART_Handle handle) {
                         stopBits[object->stopBits] |
                         parityType[object->parityType]));
 
-    Log_print3(Diags_USER1, "UART:(%p) CPU freq: %d; UART baudrate to %d",
+    // Shirzad!!!! commented this out
+/*    Log_print3(Diags_USER1, "UART:(%p) CPU freq: %d; UART baudrate to %d",
                                 hwAttrs->baseAddr,
                                 freq.lo,
                                 object->baudRate);
-
+*/
     /* Enable UART FIFOs */
     HWREG(UART0_BASE + UART_O_LCRH) |= UART_LCRH_FEN;
 

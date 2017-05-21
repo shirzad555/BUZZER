@@ -77,8 +77,8 @@ extern PIN_Config BoardGpioInitTable[];
 #define LED_ON          (1)
 #define LED_OFF         (0)
 
-#define BOARD_LED1      (IOID_3)
-#define BOARD_LED2      (IOID_4)
+#define BOARD_LED1      (IOID_6) // (IOID_3)
+#define BOARD_LED2      (IOID_7) // (IOID_4)
 #define LIS3DH_INT      (IOID_7)
 
 #define SPI_CS          (IOID_8)
@@ -86,8 +86,8 @@ extern PIN_Config BoardGpioInitTable[];
 #define SPI_MOSI        (IOID_10)
 #define SPI_MISO        (IOID_11)
 
-#define BOARD_UART_TX   (IOID_0)
-#define BOARD_UART_RX   (IOID_1)
+#define BOARD_UART_TX   (IOID_3)//(IOID_0)
+#define BOARD_UART_RX   (IOID_2)//(IOID_1)
 
 #define BUZZER_PWM      (IOID_2)
 #define BUZZER_SHDN_N   (IOID_12)
