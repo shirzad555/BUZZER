@@ -133,6 +133,9 @@ extern "C"
 //! BLE Feature Supported length
 #define B_FEATURE_SUPPORT_LENGTH                  8
 
+#define USE_128_BIT_UUID
+#define GATT_TI_UUID_128_BIT
+
 /** @defgroup BLE_STATUS_VALUES BLE Default BLE Status Values
  * returned as bStatus_t
  * @{

@@ -1,4 +1,4 @@
-# 1 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 1 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 
 
 
@@ -918,7 +918,7 @@ typedef xdc_Bits64      Bits64;
 
  
 
-# 12 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 12 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 
 
 
@@ -6533,7 +6533,7 @@ extern struct ti_sysbios_BIOS_Module_State__ ti_sysbios_BIOS_Module__state__V;
 
  
 
-# 44 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 44 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/cc26xx/Boot.h"
 
 
@@ -6925,7 +6925,7 @@ static inline void ti_sysbios_family_arm_cc26xx_Boot_Module_setMask( xdc_Bits16 
 
  
 
-# 45 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 45 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/cc26xx/Power.h"
 
 
@@ -14701,7 +14701,7 @@ static inline ti_sysbios_knl_Clock_Handle ti_sysbios_family_arm_cc26xx_Power_Mod
 
  
 
-# 46 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 46 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/cc26xx/Timer.h"
 
 
@@ -18018,7 +18018,7 @@ struct ti_sysbios_family_arm_cc26xx_Timer_Object {
 
  
 
-# 47 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 47 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/cc26xx/TimestampProvider.h"
 
 
@@ -19300,7 +19300,7 @@ extern struct ti_sysbios_family_arm_cc26xx_TimestampProvider_Module_State__ ti_s
 
  
 
-# 48 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 48 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/m3/Hwi.h"
 
 
@@ -19352,7 +19352,7 @@ extern struct ti_sysbios_family_arm_cc26xx_TimestampProvider_Module_State__ ti_s
 
  
 
-# 49 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 49 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport.h"
 
 
@@ -19891,7 +19891,7 @@ static inline void ti_sysbios_family_arm_m3_IntrinsicsSupport_Module_setMask( xd
 
  
 
-# 50 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 50 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/family/arm/m3/TaskSupport.h"
 
 
@@ -20607,7 +20607,7 @@ static inline void ti_sysbios_family_arm_m3_TaskSupport_Module_setMask( xdc_Bits
 
  
 
-# 51 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 51 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/gates/GateHwi.h"
 
 
@@ -21302,7 +21302,7 @@ struct ti_sysbios_gates_GateHwi_Object {
 
  
 
-# 52 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 52 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/gates/GateMutex.h"
 
 
@@ -25952,7 +25952,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_gates_GateMutex_Instanc
 
  
 
-# 53 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 53 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/hal/Hwi.h"
 
 
@@ -27712,7 +27712,7 @@ struct ti_sysbios_hal_Hwi_Object {
 
  
 
-# 54 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 54 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/heaps/HeapMem.h"
 
 
@@ -29174,7 +29174,7 @@ struct ti_sysbios_heaps_HeapMem_Object {
 
  
 
-# 55 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 55 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Clock.h"
 
 
@@ -29224,7 +29224,7 @@ struct ti_sysbios_heaps_HeapMem_Object {
 
  
 
-# 56 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 56 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Event.h"
 
 
@@ -29273,7 +29273,7 @@ struct ti_sysbios_heaps_HeapMem_Object {
 
  
 
-# 57 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 57 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Idle.h"
 
 
@@ -29621,7 +29621,7 @@ static inline void ti_sysbios_knl_Idle_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 58 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 58 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Intrinsics.h"
 
 
@@ -30414,7 +30414,7 @@ static inline void ti_sysbios_knl_Intrinsics_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 59 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 59 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Mailbox.h"
 
 
@@ -31291,7 +31291,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_knl_Mailbox_Instance_St
 
  
 
-# 60 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 60 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Queue.h"
 
 
@@ -31340,7 +31340,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_knl_Mailbox_Instance_St
 
  
 
-# 61 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 61 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Semaphore.h"
 
 
@@ -31390,7 +31390,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_knl_Mailbox_Instance_St
 
  
 
-# 62 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 62 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Swi.h"
 
 
@@ -31440,7 +31440,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_knl_Mailbox_Instance_St
 
  
 
-# 63 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 63 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/knl/Task.h"
 
 
@@ -31490,7 +31490,7 @@ static inline ti_sysbios_knl_Semaphore_Handle ti_sysbios_knl_Mailbox_Instance_St
 
  
 
-# 64 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 64 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/tirtos_simplelink_2_13_00_06/products/bios_6_42_00_08/packages/ti/sysbios/rom/cortexm/cc26xx/CC26xx.h"
 
 
@@ -32072,7 +32072,7 @@ static inline void ti_sysbios_rom_cortexm_cc26xx_CC26xx_Module_setMask( xdc_Bits
 
  
 
-# 65 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 65 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Assert.h"
 
 
@@ -32128,7 +32128,7 @@ static inline void ti_sysbios_rom_cortexm_cc26xx_CC26xx_Module_setMask( xdc_Bits
 
  
 
-# 66 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 66 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Core.h"
 
 
@@ -32758,7 +32758,7 @@ static inline void xdc_runtime_Core_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 67 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 67 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Defaults.h"
 
 
@@ -33194,7 +33194,7 @@ static inline void xdc_runtime_Defaults_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 68 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 68 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Diags.h"
 
 
@@ -33250,7 +33250,7 @@ static inline void xdc_runtime_Defaults_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 69 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 69 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Error.h"
 
 
@@ -33303,7 +33303,7 @@ static inline void xdc_runtime_Defaults_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 70 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 70 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Gate.h"
 
 
@@ -33877,7 +33877,7 @@ static inline void xdc_runtime_Gate_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 71 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 71 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Log.h"
 
 
@@ -33933,7 +33933,7 @@ static inline void xdc_runtime_Gate_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 72 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 72 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/LoggerCallback.h"
 
 
@@ -35075,7 +35075,7 @@ struct xdc_runtime_LoggerCallback_Object {
 
  
 
-# 73 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 73 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Main.h"
 
 
@@ -35131,7 +35131,7 @@ struct xdc_runtime_LoggerCallback_Object {
 
  
 
-# 74 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 74 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Memory.h"
 
 
@@ -35184,7 +35184,7 @@ struct xdc_runtime_LoggerCallback_Object {
 
  
 
-# 75 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 75 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Registry.h"
 
 
@@ -35698,7 +35698,7 @@ extern struct xdc_runtime_Registry_Module_State__ xdc_runtime_Registry_Module__s
 
  
 
-# 76 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 76 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Startup.h"
 
 
@@ -36186,7 +36186,7 @@ extern struct xdc_runtime_Startup_Module_State__ xdc_runtime_Startup_Module__sta
 
  
 
-# 77 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 77 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/SysCallback.h"
 
 
@@ -36855,7 +36855,7 @@ static inline void xdc_runtime_SysCallback_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 78 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 78 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/System.h"
 
 
@@ -38416,7 +38416,7 @@ extern struct xdc_runtime_System_Module_State__ xdc_runtime_System_Module__state
 
  
 
-# 79 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 79 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Text.h"
 
 
@@ -38469,7 +38469,7 @@ extern struct xdc_runtime_System_Module_State__ xdc_runtime_System_Module__state
 
  
 
-# 80 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 80 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Timestamp.h"
 
 
@@ -39268,7 +39268,7 @@ static inline void xdc_runtime_Timestamp_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 81 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 81 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 # 1 "C:/ti/xdctools_3_31_01_33_core/packages/xdc/runtime/Types.h"
 
 
@@ -39324,7 +39324,7 @@ static inline void xdc_runtime_Timestamp_Module_setMask( xdc_Bits16 mask )
 
  
 
-# 82 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 82 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 
 
 
@@ -39451,7 +39451,7 @@ void xdc_runtime_System_Module_GateProxy_leave__E__mangled__( xdc_runtime_System
  
 
  
-# 244 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashOnly_ST_OAD_ExtFlash/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
+# 244 "C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/FlashROM/configPkg/package/cfg/xdc.runtime.System_Module_GateProxy_config.c"
 
 xdc_Bool xdc_runtime_System_Module_GateProxy_Proxy__abstract__S( void )
 {

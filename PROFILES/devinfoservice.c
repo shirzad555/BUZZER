@@ -147,7 +147,7 @@ extern void* memcpy(void *dest, const void *src, size_t len);
  */
 
 // Device Information Service attribute
-static CONST gattAttrType_t devInfoService = { ATT_BT_UUID_SIZE, devInfoServUUID };
+static CONST gattAttrType_t devInfoService = { ATT_BT_UUID_SIZE, devInfoServUUID }; // Shizrad = { ATT_BT_UUID_SIZE, devInfoServUUID };
 
 // System ID characteristic
 static uint8 devInfoSystemIdProps = GATT_PROP_READ;

@@ -61,14 +61,14 @@ extern "C"
 #define SIMPLEPROFILE_CHAR5                   4  // RW uint8 - Profile Characteristic 4 value
   
 // Simple Profile Service UUID
-#define SIMPLEPROFILE_SERV_UUID               0xFFF0
+#define SIMPLEPROFILE_SERV_UUID             0xAA00 //TI_BASE_UUID_128 (0xAA00);// 0xAA00 // To match it with ZeroToBLE. Original: 0xFFF0
     
 // Key Pressed UUID
-#define SIMPLEPROFILE_CHAR1_UUID            0xFFF1
-#define SIMPLEPROFILE_CHAR2_UUID            0xFFF2
-#define SIMPLEPROFILE_CHAR3_UUID            0xFFF3
-#define SIMPLEPROFILE_CHAR4_UUID            0xFFF4
-#define SIMPLEPROFILE_CHAR5_UUID            0xFFF5
+#define SIMPLEPROFILE_CHAR1_UUID            0xAA01 // Original: 0xFFF1
+#define SIMPLEPROFILE_CHAR2_UUID            0xAA02 // and so on
+#define SIMPLEPROFILE_CHAR3_UUID            0xAA20
+#define SIMPLEPROFILE_CHAR4_UUID            0xAA21
+#define SIMPLEPROFILE_CHAR5_UUID            0xAA22
   
 // Simple Keys Profile Services bit fields
 #define SIMPLEPROFILE_SERVICE               0x00000001

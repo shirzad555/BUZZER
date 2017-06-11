@@ -29,6 +29,7 @@ PROFILES/simpleGATTprofile.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZE
 PROFILES/simpleGATTprofile.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/gap.h
 PROFILES/simpleGATTprofile.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/sm.h
 PROFILES/simpleGATTprofile.obj: ../PROFILES/simpleGATTprofile.h
+PROFILES/simpleGATTprofile.obj: ../PROFILES/st_util.h
 
 ../PROFILES/simpleGATTprofile.c: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/string.h: 
@@ -59,3 +60,4 @@ C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26
 C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/gap.h: 
 C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/sm.h: 
 ../PROFILES/simpleGATTprofile.h: 
+../PROFILES/st_util.h: 

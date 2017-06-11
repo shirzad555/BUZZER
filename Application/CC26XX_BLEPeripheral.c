@@ -3,8 +3,8 @@
   Revised:        $Date: 2016-01-07 16:59:59 -0800 (Thu, 07 Jan 2016) $
   Revision:       $Revision: 44594 $
 
-  Description:    This file contains the Simple BLE Peripheral sample 
-                  application for use with the CC2650 Bluetooth Low Energy 
+  Description:    This file contains the Simple BLE Peripheral sample
+                  application for use with the CC2650 Bluetooth Low Energy
                   Protocol Stack.
 
   Copyright 2013 - 2015 Texas Instruments Incorporated. All rights reserved.
@@ -195,21 +195,24 @@ Char sbpTaskStack[SBP_TASK_STACK_SIZE];
 static uint8_t scanRspData[] =
 {
   // complete name
-  14,   // length of this data
-  GAP_ADTYPE_LOCAL_NAME_COMPLETE,
-  'P',
-  'r',
-  'o',
-  'j',
+  17,   // length of this data // 14
+  GAP_ADTYPE_LOCAL_NAME_COMPLETE, //CC2650 SensorTag
+  'C',
+  'C',
+  '2',
+  '6',
+  '5',
+  '0',
+  ' ',
+  'S',
   'e',
-  'c',
-  't',
-  'A',
   'n',
-  'g',
-  'e',
-  'l',
+  's',
+  'o',
+  'r',
+  'T',
   'a',
+  'g',
 
   // connection interval range
   0x05,   // length of this data
@@ -238,19 +241,19 @@ static uint8_t advertData[] =
 
   // service UUID, to notify central devices what services are included
   // in this peripheral
-  0x03,   // length of this data
-  GAP_ADTYPE_16BIT_MORE,      // some of the UUID's, but not all
+  0x11, // Shirzad Original: 0x03,   // length of this data
+// Shirzad Original:  GAP_ADTYPE_16BIT_MORE,      // some of the UUID's, but not all
 #ifdef FEATURE_OAD
   LO_UINT16(OAD_SERVICE_UUID),
   HI_UINT16(OAD_SERVICE_UUID)
 #else
-  LO_UINT16(SIMPLEPROFILE_SERV_UUID),
-  HI_UINT16(SIMPLEPROFILE_SERV_UUID),
+  GAP_ADTYPE_128BIT_MORE, // Shirzad Original: LO_UINT16(SIMPLEPROFILE_SERV_UUID),
+  TI_BASE_UUID_128(SIMPLEPROFILE_SERV_UUID), // Shirzad Original: HI_UINT16(SIMPLEPROFILE_SERV_UUID),
 #endif //!FEATURE_OAD
 };
 
 // GAP GATT Attributes
-static uint8_t attDeviceName[GAP_DEVICE_NAME_LEN] = "Simple BLE Peripheral";
+static uint8_t attDeviceName[GAP_DEVICE_NAME_LEN] = "Project Angela";//"CC2650 SensorTag"; // "Simple BLE Peripheral";
 
 // Globals used for ATT Response retransmission
 static gattMsgEvent_t *pAttRsp = NULL;
@@ -374,7 +377,7 @@ static void CC26XX_BLEPeripheral_init(void)
 
   // Set device's Sleep Clock Accuracy
   //HCI_EXT_SetSCACmd(500);
-  
+
   // Create an RTOS queue for message from profile to be sent to app.
   appMsgQueue = Util_constructQueue(&appMsg);
 
@@ -383,16 +386,16 @@ static void CC26XX_BLEPeripheral_init(void)
   //                    SBP_PERIODIC_EVT_PERIOD, 0, false, SBP_PERIODIC_EVT); //Original!
   Util_constructClock(&periodicClock, CC26XX_BLEPeripheral_clockHandler,
                       SBP_PERIODIC_EVT_PERIOD, 500, false, SBP_PERIODIC_EVT);
-  
+
 #ifndef SENSORTAG_HW
 //  Board_openLCD();
 #endif //SENSORTAG_HW
-  
+
 #if SENSORTAG_HW
   // Setup SPI bus for serial flash and Devpack interface
   bspSpiOpen();
 #endif //SENSORTAG_HW
-  
+
   // Setup the GAP
   GAP_SetParamValue(TGAP_CONN_PAUSE_PERIPHERAL, DEFAULT_CONN_PAUSE_PERIPHERAL);
 
@@ -529,7 +532,7 @@ static void CC26XX_BLEPeripheral_init(void)
 #else
   LCD_WRITE_STRING("BLE Peripheral", LCD_PAGE0);
 #endif // FEATURE_OAD
-}       
+}
 
 /*********************************************************************
  * @fn      CC26XX_BLEPeripheral_taskFxn
@@ -570,11 +573,11 @@ static void CC26XX_BLEPeripheral_taskFxn(UArg a0, UArg a1)
                                 (void **)&pMsg) == ICALL_ERRNO_SUCCESS)
       {
         uint8 safeToDealloc = TRUE;
-        
+
         if ((src == ICALL_SERVICE_CLASS_BLE) && (dest == selfEntity))
         {
           ICall_Event *pEvt = (ICall_Event *)pMsg;
-          
+
           // Check for BLE stack events first
           if (pEvt->signature == 0xffff)
           {
@@ -685,18 +688,18 @@ static uint8_t CC26XX_BLEPeripheral_processStackMsg(ICall_Hdr *pMsg)
           case HCI_COMMAND_COMPLETE_EVENT_CODE:
             // Process HCI Command Complete Event
             break;
-            
+
           default:
             break;
         }
       }
       break;
-      
+
     default:
       // do nothing
       break;
   }
-  
+
   return (safeToDealloc);
 }
 
@@ -719,10 +722,10 @@ static uint8_t CC26XX_BLEPeripheral_processGATTMsg(gattMsgEvent_t *pMsg)
     {
       // First free any pending response
       CC26XX_BLEPeripheral_freeAttRsp(FAILURE);
-      
+
       // Hold on to the response message for retransmission
       pAttRsp = pMsg;
-      
+
       // Don't free the response message yet
       return (FALSE);
     }
@@ -736,7 +739,7 @@ static uint8_t CC26XX_BLEPeripheral_processGATTMsg(gattMsgEvent_t *pMsg)
     // Display the opcode of the message that caused the violation.
     LCD_WRITE_STRING_VALUE("FC Violated:", pMsg->msg.flowCtrlEvt.opcode,
                            10, LCD_PAGE5);
-  }    
+  }
   else if (pMsg->method == ATT_MTU_UPDATED_EVENT)
   {
     // MTU size updated
@@ -745,7 +748,7 @@ static uint8_t CC26XX_BLEPeripheral_processGATTMsg(gattMsgEvent_t *pMsg)
   
   // Free message payload. Needed only for ATT Protocol messages
   GATT_bm_free(&pMsg->msg, pMsg->method);
-  
+
   // It's safe to free the incoming message
   return (TRUE);
 }
@@ -765,13 +768,13 @@ static void CC26XX_BLEPeripheral_sendAttRsp(void)
   if (pAttRsp != NULL)
   {
     uint8_t status;
-    
+
     // Increment retransmission count
     rspTxRetry++;
-    
+
     // Try to retransmit ATT response till either we're successful or
     // the ATT Client times out (after 30s) and drops the connection.
-    status = GATT_SendRsp(pAttRsp->connHandle, pAttRsp->method, 
+    status = GATT_SendRsp(pAttRsp->connHandle, pAttRsp->method,
                           &(pAttRsp->msg));
     if ((status != blePending) && (status != MSG_BUFFER_NOT_AVAIL))
     {
@@ -812,13 +815,13 @@ static void CC26XX_BLEPeripheral_freeAttRsp(uint8_t status)
     {
       // Free response payload
       GATT_bm_free(&pAttRsp->msg, pAttRsp->method);
-      
+
       LCD_WRITE_STRING_VALUE("Rsp retry failed:", rspTxRetry, 10, LCD_PAGE5);
     }
-    
+
     // Free response message
     ICall_freeMsg(pAttRsp);
-    
+
     // Reset our globals
     pAttRsp = NULL;
     rspTxRetry = 0;
@@ -905,7 +908,7 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
         systemId[6] = ownAddress[4];
         systemId[5] = ownAddress[3];
 
-        DevInfo_SetParameter(DEVINFO_SYSTEM_ID, DEVINFO_SYSTEM_ID_LEN, 
+        DevInfo_SetParameter(DEVINFO_SYSTEM_ID, DEVINFO_SYSTEM_ID_LEN,
                              systemId);
 
         // Display device address
@@ -918,33 +921,33 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
       LCD_WRITE_STRING("Advertising", LCD_PAGE2);
       break;
 
-#ifdef PLUS_BROADCASTER   
+#ifdef PLUS_BROADCASTER
     /* After a connection is dropped a device in PLUS_BROADCASTER will continue
-     * sending non-connectable advertisements and shall sending this change of 
-     * state to the application.  These are then disabled here so that sending 
+     * sending non-connectable advertisements and shall sending this change of
+     * state to the application.  These are then disabled here so that sending
      * connectable advertisements can resume.
      */
     case GAPROLE_ADVERTISING_NONCONN:
       {
         uint8_t advertEnabled = FALSE;
-      
+
         // Disable non-connectable advertising.
         GAPRole_SetParameter(GAPROLE_ADV_NONCONN_ENABLED, sizeof(uint8_t),
                            &advertEnabled);
-      
+
         advertEnabled = TRUE;
-      
+
         // Enabled connectable advertising.
         GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),
                              &advertEnabled);
-        
+
         // Reset flag for next connection.
         firstConnFlag = false;
-        
+
         CC26XX_BLEPeripheral_freeAttRsp(bleNotConnected);
       }
       break;
-#endif //PLUS_BROADCASTER   
+#endif //PLUS_BROADCASTER
 
     case GAPROLE_CONNECTED:
       {
@@ -955,7 +958,7 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
         GAPRole_GetParameter(GAPROLE_CONN_BD_ADDR, peerAddress);
 
         Util_startClock(&periodicClock);
-        
+
         LCD_WRITE_STRING("Connected", LCD_PAGE2);
         LCD_WRITE_STRING(Util_convertBdAddr2Str(peerAddress), LCD_PAGE3);
 
@@ -970,7 +973,7 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
             // Disable connectable advertising.
             GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),
                                  &advertEnabled);
-            
+
             // Set to true for non-connectabel advertising.
             advertEnabled = TRUE;
 
@@ -989,7 +992,7 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
 
     case GAPROLE_WAITING:
       Util_stopClock(&periodicClock);
-      
+
       CC26XX_BLEPeripheral_freeAttRsp(bleNotConnected);
 
       PINCC26XX_setOutputValue(BOARD_LED2, 1);  // Shirzad!!!
@@ -1004,9 +1007,9 @@ static void CC26XX_BLEPeripheral_processStateChangeEvt(gaprole_States_t newState
 
     case GAPROLE_WAITING_AFTER_TIMEOUT:
       CC26XX_BLEPeripheral_freeAttRsp(bleNotConnected);
-      
+
       LCD_WRITE_STRING("Timed Out", LCD_PAGE2);
-      
+
       // Clear remaining lines
       LCD_WRITE_STRING("", LCD_PAGE3);
       LCD_WRITE_STRING("", LCD_PAGE4);
@@ -1141,17 +1144,17 @@ void CC26XX_BLEPeripheral_processOadWriteCB(uint8_t event, uint16_t connHandle,
 {
   oadTargetWrite_t *oadWriteEvt = ICall_malloc( sizeof(oadTargetWrite_t) + \
                                              sizeof(uint8_t) * OAD_PACKET_SIZE);
-  
+
   if ( oadWriteEvt != NULL )
   {
     oadWriteEvt->event = event;
     oadWriteEvt->connHandle = connHandle;
-    
+
     oadWriteEvt->pData = (uint8_t *)(&oadWriteEvt->pData + 1);
     memcpy(oadWriteEvt->pData, pData, OAD_PACKET_SIZE);
 
     Queue_enqueue(hOadQ, (Queue_Elem *)oadWriteEvt);
-    
+
     // Post the application's semaphore.
     Semaphore_post(sem);
   }

@@ -53,6 +53,8 @@
 
 #include "simpleGATTprofile.h"
 
+#include "st_util.h"
+
 /*********************************************************************
  * MACROS
  */
@@ -63,6 +65,7 @@
 
 #define SERVAPP_NUM_ATTR_SUPPORTED        17
 
+
 /*********************************************************************
  * TYPEDEFS
  */
@@ -70,6 +73,43 @@
 /*********************************************************************
  * GLOBAL VARIABLES
  */
+#if (defined USE_128_BIT_UUID)
+// Simple GATT Profile Service UUID: 0xFFF0
+CONST uint8 simpleProfileServUUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_SERV_UUID)
+};
+
+// Characteristic 1 UUID: 0xFFF1
+CONST uint8 simpleProfilechar1UUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_CHAR1_UUID)
+};
+
+// Characteristic 2 UUID: 0xFFF2
+CONST uint8 simpleProfilechar2UUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_CHAR2_UUID)
+};
+
+// Characteristic 3 UUID: 0xFFF3
+CONST uint8 simpleProfilechar3UUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_CHAR3_UUID)
+};
+
+// Characteristic 4 UUID: 0xFFF4
+CONST uint8 simpleProfilechar4UUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_CHAR4_UUID)
+};
+
+// Characteristic 5 UUID: 0xFFF5
+CONST uint8 simpleProfilechar5UUID[ATT_UUID_SIZE] =
+{
+  TI_UUID(SIMPLEPROFILE_CHAR5_UUID)
+};
+#else
 // Simple GATT Profile Service UUID: 0xFFF0
 CONST uint8 simpleProfileServUUID[ATT_BT_UUID_SIZE] =
 { 
@@ -105,6 +145,7 @@ CONST uint8 simpleProfilechar5UUID[ATT_BT_UUID_SIZE] =
 { 
   LO_UINT16(SIMPLEPROFILE_CHAR5_UUID), HI_UINT16(SIMPLEPROFILE_CHAR5_UUID)
 };
+#endif
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -125,7 +166,7 @@ static simpleProfileCBs_t *simpleProfile_AppCBs = NULL;
  */
 
 // Simple Profile Service attribute
-static CONST gattAttrType_t simpleProfileService = { ATT_BT_UUID_SIZE, simpleProfileServUUID };
+static CONST gattAttrType_t simpleProfileService = { ATT_UUID_SIZE, simpleProfileServUUID }; // Shirzad Original: = { ATT_BT_UUID_SIZE, simpleProfileServUUID };
 
 
 // Simple Profile Characteristic 1 Properties
@@ -207,7 +248,7 @@ static gattAttribute_t simpleProfileAttrTbl[SERVAPP_NUM_ATTR_SUPPORTED] =
 
       // Characteristic Value 1
       { 
-        { ATT_BT_UUID_SIZE, simpleProfilechar1UUID },
+        { ATT_UUID_SIZE, simpleProfilechar1UUID },// Shirzad original: { ATT_BT_UUID_SIZE, simpleProfilechar1UUID },
         GATT_PERMIT_READ | GATT_PERMIT_WRITE, 
         0, 
         &simpleProfileChar1 
@@ -290,7 +331,7 @@ static gattAttribute_t simpleProfileAttrTbl[SERVAPP_NUM_ATTR_SUPPORTED] =
         { ATT_BT_UUID_SIZE, clientCharCfgUUID },
         GATT_PERMIT_READ | GATT_PERMIT_WRITE, 
         0, 
-        (uint8 *)&simpleProfileChar4Config 
+        (uint8 *)&simpleProfileChar4Config
       },
       
       // Characteristic 4 User Description
@@ -330,7 +371,7 @@ static gattAttribute_t simpleProfileAttrTbl[SERVAPP_NUM_ATTR_SUPPORTED] =
  * LOCAL FUNCTIONS
  */
 static bStatus_t simpleProfile_ReadAttrCB(uint16_t connHandle,
-                                          gattAttribute_t *pAttr, 
+                                          gattAttribute_t *pAttr,
                                           uint8_t *pValue, uint16_t *pLen,
                                           uint16_t offset, uint16_t maxLen,
                                           uint8_t method);
@@ -373,10 +414,10 @@ bStatus_t SimpleProfile_AddService( uint32 services )
   simpleProfileChar4Config = (gattCharCfg_t *)ICall_malloc( sizeof(gattCharCfg_t) *
                                                             linkDBNumConns );
   if ( simpleProfileChar4Config == NULL )
-  {     
+  {
     return ( bleMemAllocError );
   }
-  
+
   // Initialize Client Characteristic Configuration attributes
   GATTServApp_InitCharCfg( INVALID_CONNHANDLE, simpleProfileChar4Config );
   

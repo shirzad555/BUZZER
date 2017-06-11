@@ -20,6 +20,7 @@ ORDERED_OBJS += \
 "./PROFILES/gattservapp_util.obj" \
 "./PROFILES/peripheral.obj" \
 "./PROFILES/simpleGATTprofile.obj" \
+"./PROFILES/st_util.obj" \
 "./OS/ICall.obj" \
 "./OS/ICallCC2650.obj" \
 "./Hardware/PINCC26XX.obj" \
@@ -185,8 +186,8 @@ CC26XX_BLE.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "Startup\Board.pp" "Startup\ccfg_appBLE.pp" "Startup\main.pp" "PROFILES\devinfoservice.pp" "PROFILES\gatt_uuid.pp" "PROFILES\gattservapp_util.pp" "PROFILES\peripheral.pp" "PROFILES\simpleGATTprofile.pp" "OS\ICall.pp" "OS\ICallCC2650.pp" "Hardware\PINCC26XX.pp" "Hardware\PWM.pp" "Hardware\SPICC26XXDMA.pp" "Hardware\UART.pp" "Hardware\UARTCC26XX.pp" "Hardware\UDMACC26XX.pp" "BLE\ICallBleAPI.pp" "BLE\bleUserConfig.pp" "Application\CC26XX_BLEPeripheral.pp" "Application\LIS3DH_Driver.pp" "Application\uart_logs.pp" "Application\util.pp" 
-	-$(RM) "Startup\Board.obj" "Startup\ccfg_appBLE.obj" "Startup\main.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simpleGATTprofile.obj" "OS\ICall.obj" "OS\ICallCC2650.obj" "Hardware\PINCC26XX.obj" "Hardware\PWM.obj" "Hardware\SPICC26XXDMA.obj" "Hardware\UART.obj" "Hardware\UARTCC26XX.obj" "Hardware\UDMACC26XX.obj" "BLE\ICallBleAPI.obj" "BLE\bleUserConfig.obj" "Application\CC26XX_BLEPeripheral.obj" "Application\LIS3DH_Driver.obj" "Application\uart_logs.obj" "Application\util.obj" 
+	-$(RM) "Startup\Board.pp" "Startup\ccfg_appBLE.pp" "Startup\main.pp" "PROFILES\devinfoservice.pp" "PROFILES\gatt_uuid.pp" "PROFILES\gattservapp_util.pp" "PROFILES\peripheral.pp" "PROFILES\simpleGATTprofile.pp" "PROFILES\st_util.pp" "OS\ICall.pp" "OS\ICallCC2650.pp" "Hardware\PINCC26XX.pp" "Hardware\PWM.pp" "Hardware\SPICC26XXDMA.pp" "Hardware\UART.pp" "Hardware\UARTCC26XX.pp" "Hardware\UDMACC26XX.pp" "BLE\ICallBleAPI.pp" "BLE\bleUserConfig.pp" "Application\CC26XX_BLEPeripheral.pp" "Application\LIS3DH_Driver.pp" "Application\uart_logs.pp" "Application\util.pp" 
+	-$(RM) "Startup\Board.obj" "Startup\ccfg_appBLE.obj" "Startup\main.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simpleGATTprofile.obj" "PROFILES\st_util.obj" "OS\ICall.obj" "OS\ICallCC2650.obj" "Hardware\PINCC26XX.obj" "Hardware\PWM.obj" "Hardware\SPICC26XXDMA.obj" "Hardware\UART.obj" "Hardware\UARTCC26XX.obj" "Hardware\UDMACC26XX.obj" "BLE\ICallBleAPI.obj" "BLE\bleUserConfig.obj" "Application\CC26XX_BLEPeripheral.obj" "Application\LIS3DH_Driver.obj" "Application\uart_logs.obj" "Application\util.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
