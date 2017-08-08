@@ -8,8 +8,8 @@ BLE/bleUserConfig.obj: ../BLE/bleUserConfig.h
 BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/bleDispatch.h
 BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/rfhal.h
 BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/hal_types.h
-BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Startup/board.h
-BLE/bleUserConfig.obj: C:/ti/tirtos_simplelink_2_13_00_06/packages/ti/drivers/PIN.h
+BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Application/board.h
+BLE/bleUserConfig.obj: C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Hardware/PIN.h
 BLE/bleUserConfig.obj: C:/ti/xdctools_3_31_01_33_core/packages/xdc/std.h
 BLE/bleUserConfig.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h
 BLE/bleUserConfig.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h
@@ -44,8 +44,8 @@ C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h:
 C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/bleDispatch.h: 
 C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/rfhal.h: 
 C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Includes/hal_types.h: 
-C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Startup/board.h: 
-C:/ti/tirtos_simplelink_2_13_00_06/packages/ti/drivers/PIN.h: 
+C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Application/board.h: 
+C:/Users/Shirzad/Documents/Shirzad/Work/PC_BUZZER/FW/Amoo/ProjectAngel_Lite/CC26XX_BLE/Hardware/PIN.h: 
 C:/ti/xdctools_3_31_01_33_core/packages/xdc/std.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h: 

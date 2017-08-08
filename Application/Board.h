@@ -59,7 +59,7 @@ extern "C" {
 /** ============================================================================
  *  Includes
  *  ==========================================================================*/
-#include <ti/drivers/PIN.h>
+#include "PIN.h" //<ti/drivers/PIN.h>
 #include <driverlib/ioc.h>
 
 /** ============================================================================
@@ -74,11 +74,34 @@ extern PIN_Config BoardGpioInitTable[];
 /* Mapping of pins to board signals using general board aliases
  *      <board signal alias>                <pin mapping>
  */
-#define LED_ON          (1)
-#define LED_OFF         (0)
 
-#define BOARD_LED1      (IOID_6) // (IOID_3)
-#define BOARD_LED2      (IOID_7) // (IOID_4)
+//#define ANGELA_BOARD_REV_A
+//#define ANGELA_BOARD_REV_X1
+#define LAUNCH_PAD_BOARD
+
+#ifdef ANGELA_BOARD_REV_A
+#define BOARD_LED1      (IOID_2)
+#define BOARD_LED2      (IOID_2)
+#define LIS3DH_INT      (IOID_12)
+
+#define SPI_CS          (IOID_8)
+#define SPI_SCK         (IOID_9)
+#define SPI_MOSI        (IOID_10)
+#define SPI_MISO        (IOID_11)
+
+#define BOARD_UART_TX   (IOID_0)
+#define BOARD_UART_RX   (IOID_1)
+
+#define BUZZER_PWM      (IOID_3)
+#define BUZZER_SHDN_N   (IOID_4)
+
+#define BOARD_KEY1      (IOID_13)
+#define BOARD_KEY2      (IOID_14)
+#endif
+
+#ifdef ANGELA_BOARD_REV_X1
+#define BOARD_LED1      (IOID_3)
+#define BOARD_LED2      (IOID_4)
 #define LIS3DH_INT      (IOID_7)
 
 #define SPI_CS          (IOID_8)
@@ -86,13 +109,38 @@ extern PIN_Config BoardGpioInitTable[];
 #define SPI_MOSI        (IOID_10)
 #define SPI_MISO        (IOID_11)
 
+#define BOARD_UART_TX   (IOID_0)
+#define BOARD_UART_RX   (IOID_1)
+
+#define BUZZER_PWM      (IOID_2)
+#define BUZZER_SHDN_N   (IOID_12)
+
+#define BOARD_KEY1      (IOID_13)
+#define BOARD_KEY2      (IOID_14)
+#endif
+
+#ifdef LAUNCH_PAD_BOARD
+#define BOARD_LED1      (IOID_6) // (IOID_3)
+#define BOARD_LED2      (IOID_7) // (IOID_4)
+#define LIS3DH_INT      (IOID_7)
+
+#define SPI_CS          (IOID_11)  // (IOID_8)
+#define SPI_SCK         (IOID_10)  // (IOID_9)
+#define SPI_MOSI        (IOID_9) //(IOID_10)
+#define SPI_MISO        (IOID_8) //(IOID_11)
+
 #define BOARD_UART_TX   (IOID_3)//(IOID_0)
 #define BOARD_UART_RX   (IOID_2)//(IOID_1)
 
 #define BUZZER_PWM      (IOID_2)
 #define BUZZER_SHDN_N   (IOID_12)
 
-#define MOTIONSNS_SPI   (CC26XX_SPI1)
+#define BOARD_KEY1      (IOID_13)
+#define BOARD_KEY2      (IOID_14)
+#endif
+
+#define MOTIONSNS_SPI   (CC26XX_SPI0)
+
 /** ============================================================================
  *  Number of peripherals and their names
  *  ==========================================================================*/

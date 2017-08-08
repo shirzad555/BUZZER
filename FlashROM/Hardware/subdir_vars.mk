@@ -6,6 +6,7 @@
 C_SRCS += \
 ../Hardware/PINCC26XX.c \
 ../Hardware/PWM.c \
+../Hardware/SPI.c \
 ../Hardware/SPICC26XXDMA.c \
 ../Hardware/UART.c \
 ../Hardware/UARTCC26XX.c \
@@ -14,6 +15,7 @@ C_SRCS += \
 OBJS += \
 ./Hardware/PINCC26XX.obj \
 ./Hardware/PWM.obj \
+./Hardware/SPI.obj \
 ./Hardware/SPICC26XXDMA.obj \
 ./Hardware/UART.obj \
 ./Hardware/UARTCC26XX.obj \
@@ -22,6 +24,7 @@ OBJS += \
 C_DEPS += \
 ./Hardware/PINCC26XX.pp \
 ./Hardware/PWM.pp \
+./Hardware/SPI.pp \
 ./Hardware/SPICC26XXDMA.pp \
 ./Hardware/UART.pp \
 ./Hardware/UARTCC26XX.pp \
@@ -30,6 +33,7 @@ C_DEPS += \
 C_DEPS__QUOTED += \
 "Hardware\PINCC26XX.pp" \
 "Hardware\PWM.pp" \
+"Hardware\SPI.pp" \
 "Hardware\SPICC26XXDMA.pp" \
 "Hardware\UART.pp" \
 "Hardware\UARTCC26XX.pp" \
@@ -38,6 +42,7 @@ C_DEPS__QUOTED += \
 OBJS__QUOTED += \
 "Hardware\PINCC26XX.obj" \
 "Hardware\PWM.obj" \
+"Hardware\SPI.obj" \
 "Hardware\SPICC26XXDMA.obj" \
 "Hardware\UART.obj" \
 "Hardware\UARTCC26XX.obj" \
@@ -46,6 +51,7 @@ OBJS__QUOTED += \
 C_SRCS__QUOTED += \
 "../Hardware/PINCC26XX.c" \
 "../Hardware/PWM.c" \
+"../Hardware/SPI.c" \
 "../Hardware/SPICC26XXDMA.c" \
 "../Hardware/UART.c" \
 "../Hardware/UARTCC26XX.c" \

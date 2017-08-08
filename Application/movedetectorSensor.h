@@ -37,8 +37,8 @@
   contact Texas Instruments Incorporated at www.TI.com.
 **************************************************************************************************/
 
-#ifndef CC26XX_BLEPERIPHERAL_H
-#define CC26XX_BLEPERIPHERAL_H
+#ifndef MOVEDETECTORSENSOR_H
+#define MOVEDETECTORSENSOR_H
 
 #ifdef __cplusplus
 extern "C"
@@ -68,7 +68,7 @@ extern "C"
 /*
  * Task creation function for the Simple BLE Peripheral.
  */
-extern void CC26XX_BLEPeripheral_createTask(void);
+extern void Movedetector_createTask(void);
 
 
 /*********************************************************************

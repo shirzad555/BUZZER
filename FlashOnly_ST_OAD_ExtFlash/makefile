@@ -18,6 +18,7 @@ ORDERED_OBJS += \
 "./PROFILES/gattservapp_util.obj" \
 "./PROFILES/peripheral.obj" \
 "./PROFILES/simpleGATTprofile.obj" \
+"./PROFILES/st_util.obj" \
 "./OS/ICall.obj" \
 "./OS/ICallCC2650.obj" \
 "./Hardware/PINCC26XX.obj" \
@@ -169,7 +170,7 @@ all: CC26XX_BLE.out
 CC26XX_BLE.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/bin/armcl" --cmd_file="/../../../CCS/Config/ccsCompilerDefines.bcfg"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 -g --gcc --define=USE_ICALL --define=POWER_SAVING --define=FEATURE_OAD --define=HAL_IMAGE_E --define=SBP_TASK_STACK_SIZE=700 --define=GAPROLE_TASK_STACK_SIZE=520 --define=HEAPMGR_SIZE=2672 --define=TI_DRIVERS_PIN_INCLUDED --define=TI_DRIVERS_I2C_INCLUDED --define=TI_DRIVERS_SPI_INCLUDED --define=ICALL_MAX_NUM_TASKS=3 --define=ICALL_MAX_NUM_ENTITIES=6 --define=xdc_runtime_Assert_DISABLE_ALL --define=xdc_runtime_Log_DISABLE_ALL --define=MAX_NUM_BLE_CONNS=1 --define=SENSORTAG_HW --define=CC26XXWARE --define=CC26XX --define=ccs --define=DEBUG --diag_wrap=off --diag_suppress=48 --display_error_number --diag_warning=225 --gen_func_subsections=on -z -m"CC26XX_BLE.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --diag_suppress=10247-D --xml_link_info="CC26XX_BLE_linkInfo.xml" --rom_model --compress_dwarf=on --unused_section_elimination=on -o "CC26XX_BLE.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/bin/armcl" --cmd_file="/../../../CCS/Config/ccsCompilerDefines.bcfg"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 -g --gcc --define=USE_ICALL --define=POWER_SAVING --define=FEATURE_OAD --define=HAL_IMAGE_E --define=SBP_TASK_STACK_SIZE=700 --define=GAPROLE_TASK_STACK_SIZE=520 --define=HEAPMGR_SIZE=2672 --define=TI_DRIVERS_PIN_INCLUDED --define=TI_DRIVERS_I2C_INCLUDED --define=TI_DRIVERS_SPI_INCLUDED --define=ICALL_MAX_NUM_TASKS=3 --define=ICALL_MAX_NUM_ENTITIES=6 --define=xdc_runtime_Assert_DISABLE_ALL --define=xdc_runtime_Log_DISABLE_ALL --define=MAX_NUM_BLE_CONNS=1 --define=SENSORTAG_HW --define=CC26XXWARE --define=CC26XX --define=ccs --define=DEBUG --display_error_number --diag_suppress=48 --diag_warning=225 --diag_wrap=off --gen_func_subsections=on -z -m"CC26XX_BLE.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include" --reread_libs --warn_sections --display_error_number --diag_suppress=10247-D --diag_wrap=off --xml_link_info="CC26XX_BLE_linkInfo.xml" --rom_model --unused_section_elimination=on --compress_dwarf=on -o "CC26XX_BLE.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -185,8 +186,8 @@ CC26XX_BLE.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "Startup\ccfg_appBLE.pp" "Startup\main.pp" "PROFILES\devinfoservice.pp" "PROFILES\gatt_uuid.pp" "PROFILES\gattservapp_util.pp" "PROFILES\peripheral.pp" "PROFILES\simpleGATTprofile.pp" "OS\ICall.pp" "OS\ICallCC2650.pp" "Hardware\PINCC26XX.pp" "Hardware\PWM.pp" "Hardware\SPICC26XXDMA.pp" "Hardware\UART.pp" "Hardware\UARTCC26XX.pp" "Hardware\UDMACC26XX.pp" "BLE\ICallBleAPI.pp" "BLE\bleUserConfig.pp" "Application\CC26XX_BLEPeripheral.pp" "Application\LIS3DH_Driver.pp" "Application\uart_logs.pp" "Application\util.pp" 
-	-$(RM) "Startup\ccfg_appBLE.obj" "Startup\main.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simpleGATTprofile.obj" "OS\ICall.obj" "OS\ICallCC2650.obj" "Hardware\PINCC26XX.obj" "Hardware\PWM.obj" "Hardware\SPICC26XXDMA.obj" "Hardware\UART.obj" "Hardware\UARTCC26XX.obj" "Hardware\UDMACC26XX.obj" "BLE\ICallBleAPI.obj" "BLE\bleUserConfig.obj" "Application\CC26XX_BLEPeripheral.obj" "Application\LIS3DH_Driver.obj" "Application\uart_logs.obj" "Application\util.obj" 
+	-$(RM) "Startup\ccfg_appBLE.pp" "Startup\main.pp" "PROFILES\devinfoservice.pp" "PROFILES\gatt_uuid.pp" "PROFILES\gattservapp_util.pp" "PROFILES\peripheral.pp" "PROFILES\simpleGATTprofile.pp" "PROFILES\st_util.pp" "OS\ICall.pp" "OS\ICallCC2650.pp" "Hardware\PINCC26XX.pp" "Hardware\PWM.pp" "Hardware\SPICC26XXDMA.pp" "Hardware\UART.pp" "Hardware\UARTCC26XX.pp" "Hardware\UDMACC26XX.pp" "BLE\ICallBleAPI.pp" "BLE\bleUserConfig.pp" "Application\CC26XX_BLEPeripheral.pp" "Application\LIS3DH_Driver.pp" "Application\uart_logs.pp" "Application\util.pp" 
+	-$(RM) "Startup\ccfg_appBLE.obj" "Startup\main.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simpleGATTprofile.obj" "PROFILES\st_util.obj" "OS\ICall.obj" "OS\ICallCC2650.obj" "Hardware\PINCC26XX.obj" "Hardware\PWM.obj" "Hardware\SPICC26XXDMA.obj" "Hardware\UART.obj" "Hardware\UARTCC26XX.obj" "Hardware\UDMACC26XX.obj" "BLE\ICallBleAPI.obj" "BLE\bleUserConfig.obj" "Application\CC26XX_BLEPeripheral.obj" "Application\LIS3DH_Driver.obj" "Application\uart_logs.obj" "Application\util.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

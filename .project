@@ -25,6 +25,13 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>HwiP.h</name>
+			<type>1</type>
+			<locationURI>PARENT-10-PROJECT_LOC/ti/simplelink_cc2640r2_sdk_1_35_00_33/source/ti/drivers/dpl/HwiP.h</locationURI>
+		</link>
+	</linkedResources>
 	<variableList>
 		<variable>
 			<name>CC26XXWARE</name>

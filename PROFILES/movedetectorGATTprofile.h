@@ -37,8 +37,8 @@
   contact Texas Instruments Incorporated at www.TI.com. 
 **************************************************************************************************/
 
-#ifndef SIMPLEGATTPROFILE_H
-#define SIMPLEGATTPROFILE_H
+#ifndef MOVEDETECTORGATTPROFILE_H
+#define MOVEDETECTORGATTPROFILE_H
 
 #ifdef __cplusplus
 extern "C"
@@ -48,33 +48,34 @@ extern "C"
 /*********************************************************************
  * INCLUDES
  */
-
+#include "bcomdef.h"
+#include "_hal_types.h"
 /*********************************************************************
  * CONSTANTS
  */
 
 // Profile Parameters
-#define SIMPLEPROFILE_CHAR1                   0  // RW uint8 - Profile Characteristic 1 value 
-#define SIMPLEPROFILE_CHAR2                   1  // RW uint8 - Profile Characteristic 2 value
-#define SIMPLEPROFILE_CHAR3                   2  // RW uint8 - Profile Characteristic 3 value
-#define SIMPLEPROFILE_CHAR4                   3  // RW uint8 - Profile Characteristic 4 value
-#define SIMPLEPROFILE_CHAR5                   4  // RW uint8 - Profile Characteristic 4 value
+#define MOVEDETECTOR_CHAR1						0	//#define SIMPLEPROFILE_CHAR1                   0  // RW uint8 - Profile Characteristic 1 value
+#define MOVEDETECTOR_CHAR2						1   //#define SIMPLEPROFILE_CHAR2                   1  // RW uint8 - Profile Characteristic 2 value
+#define MOVEDETECTOR_CHAR3                      2  // RW uint8 - Profile Characteristic 3 value
+//#define SIMPLEPROFILE_CHAR4                   3  // RW uint8 - Profile Characteristic 4 value
+//#define SIMPLEPROFILE_CHAR5                   4  // RW uint8 - Profile Characteristic 4 value
   
 // Simple Profile Service UUID
-#define SIMPLEPROFILE_SERV_UUID             0xAA00 //TI_BASE_UUID_128 (0xAA00);// 0xAA00 // To match it with ZeroToBLE. Original: 0xFFF0
+#define MOVEDETECTOR_SERV_UUID             0xBB00  //#define SIMPLEPROFILE_SERV_UUID             0xBB00 //TI_BASE_UUID_128 (0xAA00);// 0xAA00 // To match it with ZeroToBLE. Original: 0xFFF0
     
 // Key Pressed UUID
-#define SIMPLEPROFILE_CHAR1_UUID            0xAA01 // Original: 0xFFF1
-#define SIMPLEPROFILE_CHAR2_UUID            0xAA02 // and so on
-#define SIMPLEPROFILE_CHAR3_UUID            0xAA20
-#define SIMPLEPROFILE_CHAR4_UUID            0xAA21
-#define SIMPLEPROFILE_CHAR5_UUID            0xAA22
+#define MOVEDETECTOR_CHAR1_UUID            0xBB01 // This is for LED #define SIMPLEPROFILE_CHAR1_UUID            0xBB01 // Original: 0xFFF1
+#define MOVEDETECTOR_CHAR2_UUID            0xBB02 //#define SIMPLEPROFILE_CHAR2_UUID            0xBB02 // and so on
+#define MOVEDETECTOR_CHAR3_UUID            0xBB03 // This is for Alarm setting
+//#define SIMPLEPROFILE_CHAR4_UUID            0xAA21
+//#define SIMPLEPROFILE_CHAR5_UUID            0xAA22
   
 // Simple Keys Profile Services bit fields
-#define SIMPLEPROFILE_SERVICE               0x00000001
+//#define SIMPLEPROFILE_SERVICE               0x00000001
 
 // Length of Characteristic 5 in bytes
-#define SIMPLEPROFILE_CHAR5_LEN           5  
+//#define SIMPLEPROFILE_CHAR5_LEN           5
 
 /*********************************************************************
  * TYPEDEFS
@@ -90,12 +91,12 @@ extern "C"
  */
 
 // Callback when a characteristic value has changed
-typedef void (*simpleProfileChange_t)( uint8 paramID );
+typedef void (*movedetectorChange_t)( uint8 paramID );
 
 typedef struct
 {
-  simpleProfileChange_t        pfnSimpleProfileChange;  // Called when characteristic value changes
-} simpleProfileCBs_t;
+	movedetectorChange_t        pfnMovedetectorChange;  // Called when characteristic value changes
+} movedetectorCBs_t;
 
     
 
@@ -112,7 +113,7 @@ typedef struct
  *                     contain more than one service.
  */
 
-extern bStatus_t SimpleProfile_AddService( uint32 services );
+extern bStatus_t Movedetector_AddService( uint32 services );
 
 /*
  * SimpleProfile_RegisterAppCBs - Registers the application callback function.
@@ -120,7 +121,7 @@ extern bStatus_t SimpleProfile_AddService( uint32 services );
  *
  *    appCallbacks - pointer to application callbacks.
  */
-extern bStatus_t SimpleProfile_RegisterAppCBs( simpleProfileCBs_t *appCallbacks );
+extern bStatus_t Movedetector_RegisterAppCBs( movedetectorCBs_t *appCallbacks );
 
 /*
  * SimpleProfile_SetParameter - Set a Simple GATT Profile parameter.
@@ -132,7 +133,7 @@ extern bStatus_t SimpleProfile_RegisterAppCBs( simpleProfileCBs_t *appCallbacks 
  *          data type (example: data type of uint16 will be cast to 
  *          uint16 pointer).
  */
-extern bStatus_t SimpleProfile_SetParameter( uint8 param, uint8 len, void *value );
+extern bStatus_t Movedetector_SetParameter( uint8 param, uint8 len, void *value );
   
 /*
  * SimpleProfile_GetParameter - Get a Simple GATT Profile parameter.
@@ -143,7 +144,7 @@ extern bStatus_t SimpleProfile_SetParameter( uint8 param, uint8 len, void *value
  *          data type (example: data type of uint16 will be cast to 
  *          uint16 pointer).
  */
-extern bStatus_t SimpleProfile_GetParameter( uint8 param, void *value );
+extern bStatus_t Movedetector_GetParameter( uint8 param, void *value );
 
 
 /*********************************************************************

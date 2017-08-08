@@ -61,6 +61,8 @@
 */
 PIN_Config BoardGpioInitTable[] = {
 
+	BOARD_KEY1      | PIN_GPIO_OUTPUT_DIS   | PIN_INPUT_EN  |  PIN_PULLUP,
+	BOARD_KEY2      | PIN_GPIO_OUTPUT_DIS   | PIN_INPUT_EN  |  PIN_PULLUP,
     BOARD_LED1      | PIN_GPIO_OUTPUT_EN    | PIN_GPIO_LOW  | PIN_PUSHPULL      | PIN_DRVSTR_MAX,     /* LED initially off             */
     BOARD_LED2      | PIN_GPIO_OUTPUT_EN    | PIN_GPIO_LOW  | PIN_PUSHPULL      | PIN_DRVSTR_MAX,     /* LED initially off             */
     LIS3DH_INT      | PIN_INPUT_EN          | PIN_PULLUP    | PIN_HYSTERESIS,                         /* todo: find out the polarity & ISR */
@@ -156,7 +158,7 @@ const UDMACC26XX_Config UDMACC26XX_config[] = {
 #endif
 
 /* Include drivers */
-#include <SPICC26XXDMA.h>
+#include <ti/drivers/spi/SPICC26XXDMA.h>
 
 /* SPI objects */
 SPICC26XX_Object spiCC26XXDMAObjects[CC26XX_SPICOUNT];
@@ -195,7 +197,7 @@ const SPI_Config SPI_config[] = {
     /* SRF06EB_CC26XX_SPI0 */
     {&SPICC26XXDMA_fxnTable, &spiCC26XXDMAObjects[0], &spiCC26XXDMAHWAttrs[0]},
 //    /* SRF06EB_CC26XX_SPI1 */
-//    {&SPICC26XXDMA_fxnTable, &spiCC26XXDMAObjects[1], &spiCC26XXDMAHWAttrs[1]},
+    {&SPICC26XXDMA_fxnTable, &spiCC26XXDMAObjects[1], &spiCC26XXDMAHWAttrs[1]},
     {NULL, NULL, NULL},
 };
 /*

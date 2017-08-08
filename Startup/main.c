@@ -42,11 +42,9 @@
 #include "ICall.h"
 #include "bcomdef.h"
 #include "peripheral.h"
-#include "CC26XX_BLEPeripheral.h"
-
-/* Header files required to enable instruction fetch cache */
 #include <inc/hw_memmap.h>
 #include <driverlib/vims.h>
+#include <movedetectorSensor.h>
 
 #ifndef USE_DEFAULT_USER_CFG
 
@@ -107,7 +105,7 @@ int main()
     /* Kick off profile - Priority 3 */
     GAPRole_createTask();
     
-    CC26XX_BLEPeripheral_createTask();
+    Movedetector_createTask();
 
 #ifdef FEATURE_OAD
     {

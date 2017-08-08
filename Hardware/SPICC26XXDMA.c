@@ -384,15 +384,15 @@ static void SPICC26XXDMA_configDMA(SPI_Handle handle, SPI_Transaction *transacti
     /* Enable the required DMA channels in the SPI module to start the transaction */
     SSIDMAEnable(hwAttrs->baseAddr, SSI_DMA_TX | SSI_DMA_RX);
 
-    Log_print1(Diags_USER1,"SPI:(%p) DMA transfer enabled", hwAttrs->baseAddr);
+ //   Log_print1(Diags_USER1,"SPI:(%p) DMA transfer enabled", hwAttrs->baseAddr);
 
-    Log_print5(Diags_USER2,"SPI:(%p) DMA transaction: %p, "
+/*    Log_print5(Diags_USER2,"SPI:(%p) DMA transaction: %p, "
                            "rxBuf: %p; txBuf: %p; Count: %d",
                             hwAttrs->baseAddr,
                             (UArg)transaction,
                             (UArg)transaction->rxBuf,
                             (UArg)transaction->txBuf,
-                            (UArg)transaction->count);
+                            (UArg)transaction->count); */
 }
 
 /*
@@ -469,8 +469,8 @@ static void SPICC26XXDMA_hwiFxn (UArg arg) {
              */
             msg = object->currentTransaction;
 
-            Log_print2(Diags_USER1,"SPI:(%p) DMA transaction: %p complete",
-                                    hwAttrs->baseAddr, (UArg)msg);
+//            Log_print2(Diags_USER1,"SPI:(%p) DMA transaction: %p complete",
+//                                    hwAttrs->baseAddr, (UArg)msg);
 
             /* Release constraint since transaction is done */
             threadSafeConstraintRelease((uint32_t)(object->currentTransaction->txBuf));
@@ -766,9 +766,9 @@ bool SPICC26XXDMA_transfer(SPI_Handle handle, SPI_Transaction *transaction)
     threadSafeConstraintSet((uint32_t)(transaction->txBuf));
 
     if (object->transferMode == SPI_MODE_BLOCKING) {
-        Log_print1(Diags_USER1, "SPI:(%p) transfer pending on transferComplete "
-                                "semaphore",
-                ((SPICC26XX_HWAttrs const *)(handle->hwAttrs))->baseAddr);
+//        Log_print1(Diags_USER1, "SPI:(%p) transfer pending on transferComplete "
+//                                "semaphore",
+//                ((SPICC26XX_HWAttrs const *)(handle->hwAttrs))->baseAddr);
 
         if (!Semaphore_pend(Semaphore_handle(&(object->transferComplete)), object->transferTimeout)) {
             /* Cancel the transfer, if we experience a timeout */
@@ -854,8 +854,8 @@ void SPICC26XXDMA_transferCancel(SPI_Handle handle) {
     /* Indicate we are done with this transfer */
     object->currentTransaction = NULL;
 
-    Log_print2(Diags_USER1,"SPI:(%p) DMA transaction: %p cancelled",
-                            hwAttrs->baseAddr, (UArg)msg);
+//    Log_print2(Diags_USER1,"SPI:(%p) DMA transaction: %p cancelled",
+//                            hwAttrs->baseAddr, (UArg)msg);
 
     /* Perform callback */
     object->transferCallbackFxn(handle, msg);
@@ -874,8 +874,8 @@ static void SPICC26XXDMA_transferCallback(SPI_Handle handle, SPI_Transaction *ms
 {
     SPICC26XX_Object         *object;
 
-    Log_print1(Diags_USER1, "SPI DMA:(%p) posting transferComplete semaphore",
-                ((SPICC26XX_HWAttrs const *)(handle->hwAttrs))->baseAddr);
+//    Log_print1(Diags_USER1, "SPI DMA:(%p) posting transferComplete semaphore",
+//                ((SPICC26XX_HWAttrs const *)(handle->hwAttrs))->baseAddr);
 
     /* Get the pointer to the object */
     object = handle->object;
@@ -946,8 +946,8 @@ static void SPICC26XXDMA_initHw(SPI_Handle handle) {
                        mode[object->mode], object->bitRate, object->dataSize);
 
     /* Print the configuration */
-    Log_print3(Diags_USER1, "SPI:(%p) CPU freq: %d; SPI freq to %d",
-               hwAttrs->baseAddr, freq.lo, object->bitRate);
+//    Log_print3(Diags_USER1, "SPI:(%p) CPU freq: %d; SPI freq to %d", // Shirzad
+//               hwAttrs->baseAddr, freq.lo, object->bitRate);
 }
 
 /*
